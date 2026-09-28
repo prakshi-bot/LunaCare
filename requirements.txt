@@ -1,0 +1,32 @@
+# ==========================================
+# LunaCare: Project Dependencies
+# ==========================================
+
+# Core Web Application Framework
+streamlit>=1.35.0
+
+# Environment Variable Management
+python-dotenv>=1.0.0
+
+# Interactive Data Visualization & Analytics
+plotly>=5.20.0
+pandas>=2.0.0
+numpy>=1.26.0
+
+# Google Gemini Official SDK (Phase 2)
+google-genai>=0.1.0
+
+# Automated Testing Framework
+pytest>=8.0.0
+
+# Phase 3 Dependencies (Knowledge Base & Chroma Vector Store):
+chromadb>=0.5.0
+langchain-core>=0.2.0
+langchain-text-splitters>=0.2.0
+langchain-chroma>=0.1.0
+pypdf>=4.2.0
+pysqlite3-binary
+
+# Phase 5 Dependencies (Tools & Agent):
+python-dateutil>=2.8.2
+pydantic>=2.0.0

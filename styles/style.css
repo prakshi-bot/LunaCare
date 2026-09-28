@@ -1,0 +1,357 @@
+/* ===================================================
+   LunaCare: Design System & Color Palette
+   Theme: Light-Pink + Muted-Rose Wellness Aesthetic
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+
+:root {
+  /* 1. Main Background: Soft Light Pink */
+  --bg-main: #F8DDE3;
+  
+  /* 2. Cards / Panels: Subtle Pink-Tinted White */
+  --bg-surface: #FFF8FB;
+  
+  /* 3. Secondary & Light Surface Accents */
+  --bg-subtle: #F1E2E6;
+  --bg-lavender-tint: #F1E2E6;
+  --accent-secondary: #D9AEB8;
+  --accent-light-rose: #D9AEB8;
+  --accent-blush: #F8DDE3;
+  
+  /* 4. Primary Brand: Muted Rose */
+  --primary-rose: #B97988;
+  --primary-lilac: #B97988;
+  --primary-lavender: #B97988;
+  --primary-dark: #B97988;
+  --primary-hover: #A86474;
+  
+  /* 5. Text: Soft Dark Purple / Neutral */
+  --text-charcoal: #4A3B4F;
+  --text-muted: #6B5B70;
+  
+  /* 6. Borders & Dividers: Soft Rose-Pink */
+  --border-delicate: #E7C9D0;
+  --border-focus: #B97988;
+  
+  /* Shadows & Radii */
+  --shadow-soft: 0 8px 24px -4px rgba(74, 59, 79, 0.06);
+  --shadow-hover: 0 14px 30px -4px rgba(74, 59, 79, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+}
+
+/* Base Body & App Container */
+.stApp {
+  background-color: var(--bg-main) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: var(--text-charcoal) !important;
+}
+
+/* Remove default Streamlit top header padding */
+.block-container {
+  padding-top: 2rem !important;
+  padding-bottom: 3.5rem !important;
+  max-width: 1140px !important;
+}
+
+/* Custom Typography - Headings use Primary Muted Rose */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  color: var(--primary-rose) !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 700 !important;
+}
+
+p, span, label {
+  color: var(--text-charcoal);
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+  background-color: #FAF0F3 !important;
+  border-right: 1px solid var(--border-delicate) !important;
+}
+
+section[data-testid="stSidebar"] .block-container {
+  padding-top: 1.5rem !important;
+}
+
+/* LunaCare Brand Header Badge */
+.brand-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(185, 121, 136, 0.18), rgba(217, 174, 184, 0.20));
+  border: 1px solid rgba(185, 121, 136, 0.35);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-rose);
+  margin-bottom: 1rem;
+}
+
+.brand-title-hero {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--primary-rose);
+  margin-bottom: 0.8rem;
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #B97988 0%, #A86474 50%, #D9AEB8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+/* Custom Cards */
+.luna-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-delicate) !important;
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+
+.luna-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(185, 121, 136, 0.5) !important;
+}
+
+.luna-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  background: var(--bg-subtle) !important;
+  border: 1px solid rgba(185, 121, 136, 0.25) !important;
+}
+
+.luna-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-rose) !important;
+  margin-bottom: 0.4rem;
+}
+
+.luna-card-text {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-muted) !important;
+}
+
+.luna-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bg-subtle) !important;
+  color: var(--primary-rose) !important;
+  border: 1px solid rgba(185, 121, 136, 0.35) !important;
+  margin-top: 0.8rem;
+}
+
+/* Medical Disclaimer Banner */
+.disclaimer-banner {
+  background: linear-gradient(135deg, #FFF8FB 0%, #F1E2E6 100%) !important;
+  border-left: 4px solid var(--primary-rose) !important;
+  border-top: 1px solid var(--border-delicate) !important;
+  border-right: 1px solid var(--border-delicate) !important;
+  border-bottom: 1px solid var(--border-delicate) !important;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-charcoal) !important;
+  margin: 1.5rem 0;
+}
+
+/* Streamlit Native Chat Messages Styling */
+div[data-testid="stChatMessage"] {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-delicate) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.1rem 1.4rem !important;
+  margin-bottom: 0.85rem !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+div[data-testid="stChatMessage"] p,
+div[data-testid="stChatMessage"] li,
+div[data-testid="stChatMessage"] span {
+  color: var(--text-charcoal) !important;
+  line-height: 1.65 !important;
+  font-size: 0.96rem !important;
+}
+
+div[data-testid="stChatMessage"]:has(span[data-testid="chatAvatarIcon-user"]) {
+  background: linear-gradient(135deg, #FFF8FB 0%, #F1E2E6 100%) !important;
+  border-color: rgba(185, 121, 136, 0.35) !important;
+}
+
+div[data-testid="stChatMessage"]:has(div:contains("🌙")) {
+  background: var(--bg-surface) !important;
+  border-left: 3.5px solid var(--primary-rose) !important;
+}
+
+/* Step Flow Container */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface) !important;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-delicate) !important;
+  padding: 1.8rem;
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+}
+
+.step-number {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-rose) !important;
+  color: #FFFFFF !important;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Buttons Enhancement - Primary Buttons use Muted Rose */
+.stButton > button {
+  background: #B97988 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.55rem 1.4rem !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 4px 14px rgba(185, 121, 136, 0.28) !important;
+  transition: all 0.25s ease !important;
+}
+
+.stButton > button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(185, 121, 136, 0.40) !important;
+  background: #A86474 !important;
+}
+
+/* Secondary/Ghost Action Buttons */
+.secondary-btn button {
+  background: var(--bg-surface) !important;
+  color: var(--primary-rose) !important;
+  border: 1px solid var(--border-delicate) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.secondary-btn button:hover {
+  border-color: var(--primary-rose) !important;
+  color: var(--primary-hover) !important;
+  background: var(--bg-subtle) !important;
+}
+
+/* Chat Input Styling */
+div[data-testid="stChatInput"] {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-delicate) !important;
+  border-radius: 16px !important;
+}
+
+div[data-testid="stChatInput"] textarea {
+  color: var(--text-charcoal) !important;
+}
+
+/* Custom breathing circle */
+@keyframes breatheAnimation {
+  0% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(185, 121, 136, 0.3); }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 45px rgba(217, 174, 184, 0.5); }
+  100% { transform: scale(1); opacity: 0.8; box-shadow: 0 0 20px rgba(185, 121, 136, 0.3); }
+}
+
+.breathing-orb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #D9AEB8 0%, #B97988 70%, #A86474 100%);
+  margin: 2rem auto;
+  animation: breatheAnimation 8s infinite ease-in-out;
+}
+
+/* Footer Section */
+.luna-footer {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  border-top: 1px solid var(--border-delicate);
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ===================================================
+   Universal overrides for legacy inline palette colors
+   Guarantees all pages adopt the new palette
+   =================================================== */
+[style*="#802c5c"], [style*="#802C5C"],
+[style*="#B784C6"], [style*="#b784c6"],
+[style*="#3E3453"], [style*="#3e3453"],
+[style*="#8E7DBE"], [style*="#8e7dbe"] {
+  color: var(--primary-rose) !important;
+}
+
+[style*="#6b234b"], [style*="#6B234B"],
+[style*="#A66DB5"], [style*="#a66db5"],
+[style*="#7B68B0"], [style*="#7b68b0"] {
+  color: var(--primary-hover) !important;
+}
+
+[style*="#fecddf"], [style*="#FECDDF"],
+[style*="#D8B4E2"], [style*="#d8b4e2"],
+[style*="#D48C9E"], [style*="#d48c9e"] {
+  color: var(--accent-secondary) !important;
+}
+
+[style*="#412c32"], [style*="#412C32"],
+[style*="#6C6878"], [style*="#6c6878"],
+[style*="#2D2B35"], [style*="#2d2b35"] {
+  color: var(--text-charcoal) !important;
+}
+
+[style*="#f3b6cb"], [style*="#F3B6CB"],
+[style*="#E8D3EA"], [style*="#e8d3ea"],
+[style*="#EFE8E2"], [style*="#efe8e2"],
+[style*="#EFEAE4"], [style*="#efeae4"] {
+  border-color: var(--border-delicate) !important;
+}
+
+[style*="#EDE1F2"], [style*="#ede1f2"],
+[style*="#F3EFF9"], [style*="#f3eff9"] {
+  background-color: var(--bg-subtle) !important;
+  border-color: var(--border-delicate) !important;
+}
+
+[style*="#FFF7F5"], [style*="#fff7f5"] {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--border-delicate) !important;
+}
